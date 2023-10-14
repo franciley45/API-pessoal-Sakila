@@ -23,3 +23,10 @@ SELECT first_name, last_name, address
 FROM customer c, address a
 WHERE active = 1 AND c.address_id = a.address_id;
 ```
+4. Lista dos clientes inativos
+
+```sql
+SELECT *
+FROM customer
+WHERE active = 0;
+```

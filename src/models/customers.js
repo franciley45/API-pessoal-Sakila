@@ -7,3 +7,10 @@ export async function getAllCustomers() {
     const [result] = await (await connect()).query(sql)
     return result
   }
+  export async function getAllCustomersInactive() {
+    const sql = `SELECT *
+    FROM customer
+    WHERE active = 0;`
+    const [result] = await (await connect()).query(sql)
+    return result
+  }
