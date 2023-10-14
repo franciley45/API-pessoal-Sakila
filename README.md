@@ -49,3 +49,10 @@ SELECT f.title, a.first_name, a.last_name
 FROM film f, film_actor fa, actor a
 WHERE f.film_id = fa.film_id AND a.actor_id = fa.actor_id;
 ```
+6. Relação de filmes com participação de um ator específico passe o nome do ator na rota.
+```sql
+SELECT f.title, a.first_name, a.last_name
+FROM film f, film_actor fa, actor a
+WHERE f.film_id = fa.film_id AND a.actor_id = fa.actor_id
+AND a.first_name = ?,['scarlett']
+```
