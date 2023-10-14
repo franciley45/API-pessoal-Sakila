@@ -16,3 +16,10 @@ FROM film;
 SELECT title 
 FROM film;
 ```
+3. Lista dos clientes ativos e respectivos endereços
+
+```sql
+SELECT first_name, last_name, address
+FROM customer c, address a
+WHERE active = 1 AND c.address_id = a.address_id;
+```
