@@ -42,3 +42,10 @@ WHERE c.address_id = a.address_id
 	AND ct.country_id = co.country_id
     AND co.country = "Brazil";
 ```
+5. Relação de filmes e atores que atuaram no mesmo.
+
+```sql
+SELECT f.title, a.first_name, a.last_name
+FROM film f, film_actor fa, actor a
+WHERE f.film_id = fa.film_id AND a.actor_id = fa.actor_id;
+```
