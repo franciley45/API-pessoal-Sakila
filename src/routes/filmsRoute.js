@@ -1,6 +1,5 @@
 import express from 'express';
-import { getAllFilmsActorsControllers, getAllFilmsControllers, getAllFilmsTitleControllers } from '../controllers/films.js';
-import { getAllFilmsActorNameControllers } from '../controllers/customers.js';
+import { getAllFilmsActorNameControllers, getAllFilmsActorsControllers, getAllFilmsControllers, getAllFilmsTitleControllers } from '../controllers/films.js';
 
 const filmesRoute = express.Router();
 

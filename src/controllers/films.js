@@ -1,4 +1,4 @@
-import { getAllFilms, getAllFilmsActors, getAllFilmsTitle } from "../models/films.js";
+import { getAllFilms, getAllFilmsActorName, getAllFilmsActors, getAllFilmsTitle } from "../models/films.js";
 
 const status = 200;
 
@@ -14,5 +14,12 @@ export async function getAllFilmsTitleControllers(_req, res) {
 
 export async function getAllFilmsActorsControllers(_req, res) {
     const result = await getAllFilmsActors()
+    return res.status(status).json(result)
+}
+
+export async function getAllFilmsActorNameControllers(req, res) {
+    const { name }=  req.params
+    const result = await getAllFilmsActorName(name)
+    if(result.length === 0 ) return res.status(400).json({message: 'actor not found'})
     return res.status(status).json(result)
 }
