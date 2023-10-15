@@ -32,3 +32,12 @@ export async function getAllFilms() {
     const [result] = await (await connect()).query(sql,[name])
     return result
   }
+
+  export async function getAllFilmsCategory() {
+    const sql = `SELECT f.title, c.name 
+    FROM film f,category c, film_category fc
+    WHERE f.film_id = fc.film_id
+      AND fc.category_id = c.category_id;`
+    const [result] = await (await connect()).query(sql)
+    return result
+  }

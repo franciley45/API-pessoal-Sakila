@@ -67,3 +67,10 @@ FROM film f, film_actor fa, actor a
 WHERE f.film_id = fa.film_id AND a.actor_id = fa.actor_id
 AND a.first_name = ?,['scarlett']
 ```
+10. Lista de filmes por categoria.
+```sql
+SELECT f.title, c.name 
+FROM film f,category c, film_category fc
+WHERE f.film_id = fc.film_id
+  AND fc.category_id = c.category_id;
+```
