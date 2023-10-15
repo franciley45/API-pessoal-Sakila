@@ -1,9 +1,16 @@
-import { getAllFilms, getAllFilmsActorName, getAllFilmsActors, getAllFilmsTitle } from "../models/films.js";
+import { getAllFilms, getAllFilmsActorName, getAllFilmsActors, getAllFilmsId, getAllFilmsTitle } from "../models/films.js";
 
 const status = 200;
 
 export async function getAllFilmsControllers(_req, res) {
     const result = await getAllFilms()
+    return res.status(status).json(result)
+}
+
+export async function getAllFilmsIdControllers(req, res) {
+    const { id } = req.params
+    const result = await getAllFilmsId(id)
+    if(result.length === 0 ) return res.status(400).json({message: 'id not found'})
     return res.status(status).json(result)
 }
 

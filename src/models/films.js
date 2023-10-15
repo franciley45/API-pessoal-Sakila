@@ -5,6 +5,11 @@ export async function getAllFilms() {
     const [result] = await (await connect()).query(sql)
     return result
   }
+  export async function getAllFilmsId(id) {
+    const sql = `SELECT * FROM film WHERE film_id =?;`
+    const [result] = await (await connect()).query(sql,[id])
+    return result
+  }
 
   export async function getAllFilmsTitle() {
     const sql = `SELECT title FROM film;`
