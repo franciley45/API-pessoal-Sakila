@@ -1,5 +1,5 @@
 import express from 'express';
-import { getAllCustomerIdControllers, getAllCustomersBrasilControllers, getAllCustomersControllers, getAllCustomersInactiveControllers } from '../controllers/customers.js';
+import { getAllCustomerIdControllers } from '../controllers/customers.js';
 const customerRoute = express.Router();
 
 
