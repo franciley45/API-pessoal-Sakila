@@ -1,7 +1,7 @@
 # API-pessoal-Sakila
 
 # Olá! Esta API foi desenvolvida para desenvolvedores Front-end júnior que desejam aprimorar ou expandir seus conhecimentos em consumo de APIs. O banco de dados usado como referência foi o Sakila, que simula uma locadora de filmes. O esquema do banco de dados está apresentado logo abaixo.
-
+ <img alt="Rafa-Js" height="30" width="40" src="./src/schema/SampleSakila.png">
 # Lista das rotas da API
 
 1. Lista de todos os filmes
