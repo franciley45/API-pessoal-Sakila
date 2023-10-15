@@ -1,10 +1,10 @@
 import express from 'express';
 import { getAllCustomersBrasilControllers, getAllCustomersControllers, getAllCustomersInactiveControllers } from '../controllers/customers.js';
-const customerRoute = express.Router();
+const customersRoute = express.Router();
 
-customerRoute.get('/', getAllCustomersControllers)
-customerRoute.get('/inactive', getAllCustomersInactiveControllers)
-customerRoute.get('/brasil', getAllCustomersBrasilControllers)
+customersRoute.get('/', getAllCustomersControllers)
+customersRoute.get('/inactive', getAllCustomersInactiveControllers)
+customersRoute.get('/brasil', getAllCustomersBrasilControllers)
 
 
-export default customerRoute;
+export default customersRoute;

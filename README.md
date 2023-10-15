@@ -29,8 +29,13 @@ SELECT first_name, last_name, address
 FROM customer c, address a
 WHERE active = 1 AND c.address_id = a.address_id;
 ```
+6. Lista de cliente por id
 
-5. Lista dos clientes inativos
+```sql
+SELECT *
+FROM customer WHERE customer_id= ?,[id]
+```
+7. Lista dos clientes inativos
 
 ```sql
 SELECT *
@@ -38,7 +43,7 @@ FROM customer
 WHERE active = 0;
 ```
 
-6. Lista dos nomes dos clientes residentes no Brasil.
+8. Lista dos nomes dos clientes residentes no Brasil.
 
 ```sql
 SELECT first_name, last_name, a.address, co.country
@@ -48,14 +53,14 @@ WHERE c.address_id = a.address_id
 	AND ct.country_id = co.country_id
     AND co.country = "Brazil";
 ```
-7. Relação de filmes e atores que atuaram no mesmo.
+9. Relação de filmes e atores que atuaram no mesmo.
 
 ```sql
 SELECT f.title, a.first_name, a.last_name
 FROM film f, film_actor fa, actor a
 WHERE f.film_id = fa.film_id AND a.actor_id = fa.actor_id;
 ```
-8. Relação de filmes com participação de um ator específico passe o nome do ator na rota.
+10. Relação de filmes com participação de um ator específico passe o nome do ator na rota.
 ```sql
 SELECT f.title, a.first_name, a.last_name
 FROM film f, film_actor fa, actor a
