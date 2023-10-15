@@ -1,5 +1,6 @@
 
 import app from './app.js';
 
+const PORT = 3000;
 
-app.listen(process.env.PORT, () => console.log(`servidor de Pé na porta: ${process.env.PORT}`))
+app.listen(PORT, () => console.log(`servidor de Pé na porta: ${PORT}`))
